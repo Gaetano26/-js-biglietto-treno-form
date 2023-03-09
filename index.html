@@ -1,34 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <div id="app">
-        <div>
-             <h1>Calcola il prezzo del tuo Biglietto</h1>
-          <input type="text" name="nome-cognome" id="nome-cognome">
-         <input type="number" name="age" id="age">
-         <input type="number" name="km" id="km">
-         
-         <button class="genera">Genera</button>
-         <button class="clear">Cancella</button>
-        </div>
 
-        <div>
-            <div class="nominativo"></div>
-            <div class="ticket"></div>
+<body class="bg-black">
+    <div class="container-fluid">
+        <h1 class="col text-center text-white">Calcola il prezzo del tuo Biglietto</h1>
+        <div id="app" class="row text-center text-nowrap bg-success py-3 px-3 mt-5">
+            
+            
+                
+                <section class="col">
+                    <h3 class="text-center text-white">Nome e Cognome</h3>
+                    <input type="text" name="nome" id="nome">
+                </section>
+                <section class="col">
+                    <h3 class=" text-center text-white">Età</h3>
+                    <input type="number" name="age" id="age">
+                </section>
+                <section class="col">
+                    <h3 class="text-center text-white">Chilometri</h3>
+                    <input type="number" name="km" id="km">
+                </section>
+
+                <section class="col pt-3">
+                    <button class="genera">Genera</button>
+                    <button class="clear">Cancella</button>
+                </section>
+
+
+
+        </div>
+           
+        
+
+    </div>
+
+    <div class="container-fluid d-flex justify-content-center mt-5"> 
+        <div class="biglietto px-3">
+            <div id="dettagli" class="pt-3 ps-3">
+                <h3>Dettaglio Passeggero</h3>
+                <br>
+            </div>
+            <div class="d-flex bg-info pt-3 px-3 justify-content-between mt-4">
+                <div>
+                    <h4>Nome Passeggero</h4>
+                    <div class="nominativo"></div>
+                </div>
+                 
+                 <div>
+                    <h5>Offerta</h5>
+                    <p>Biglietto stardard</p>
+                </div>
+                <div>
+                    <h5>Carrozza</h5>
+                    <p>5</p>
+                 </div>
+                 <div>
+                    <h5>Codice CP</h5>
+                    <p>92011</p>
+                 </div>
+                 <div>
+                    <h4>Costo Biglietto</h4>
+                    <div class="ticket"></div>
+                </div>
+
+                
+            </div>
+
+               
         </div>
     </div>
-       
 
-    
+
+
     <script src="./js/index.js"></script>
 </body>
 

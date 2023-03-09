@@ -10,7 +10,7 @@
 
 const app = document.getElementById('app');
 
-const nomeCognomeBox = app.querySelector('input[name="nome-cognome"]');
+const nomeCognomeBox = app.querySelector('input[name= "nome"]');
 
 const ageBox = app.querySelector('input[name="age"]');
 
@@ -39,33 +39,31 @@ generate.addEventListener('click', function (){
     let discountForMinors = 0.20;
     let discountOver65 = 0.40;
     let price = (km * priceForKm).toFixed(2);
-    ticket.innerHTML += `
-    <h4>${price} euro</h4>
-    `;
     nominativo.innerHTML += `
-    <h4>${nomeCognome}</h4>
+    <p>${nomeCognome}</p>
     `;
+
     if (age < 18 ){
         price = (price -(price * discountForMinors)).toFixed(2);
         ticket.innerHTML += 
         `
-        <h4>${price} euro </h4>
+        <p>${price} euro </p>
         `;
 
       
    // Condizione sconto superiore ai 65 anni
-      } else if (age > 65 ) {
+    } else if (age > 65 ) {
       price = (price - (price * discountOver65)).toFixed(2);
       ticket.innerHTML += 
       `
-      <h4>${price} euro </h4>
+      <p>${price} euro </p>
       `;
       
   // Condizione prezzo normale senza sconto
   } else {
     ticket.innerHTML += 
     `
-    <h4>${price} euro </h4>
+    <p>${price} euro </p>
     `;
    
   }
