@@ -13,73 +13,92 @@
 </head>
 
 <body class="bg-black">
+    <!--container fluid progetto-->
     <div class="container-fluid">
+         <!--titolo-->
         <h1 class="col text-center text-white">Calcola il prezzo del tuo Biglietto</h1>
+        <!--#app with row-->
         <div id="app" class="row text-center text-nowrap bg-success py-3 px-3 mt-5">
-            
-            
-                
-                <section class="col">
-                    <h3 class="text-center text-white">Nome e Cognome</h3>
-                    <input type="text" name="nome" id="nome">
-                </section>
-                <section class="col">
-                    <h3 class=" text-center text-white">Età</h3>
-                    <input type="number" name="age" id="age">
-                </section>
-                <section class="col">
-                    <h3 class="text-center text-white">Chilometri</h3>
-                    <input type="number" name="km" id="km">
-                </section>
 
-                <section class="col pt-3">
-                    <button class="genera">Genera</button>
-                    <button class="clear">Cancella</button>
-                </section>
+
+             <!--sezioni-->
+             <!--sezione nome e cognome-->
+            <section class="col">
+                <h3 class="text-center text-white">Nome e Cognome</h3>
+                <input type="text" name="nome" id="nome">
+            </section>
+            <!--sezione Età-->
+            <section class="col">
+                <h3 class=" text-center text-white">Età</h3>
+                <input type="number" name="age" id="age">
+            </section>
+            <!--sezione chilometri-->
+            <section class="col">
+                <h3 class="text-center text-white">Chilometri</h3>
+                <input type="number" name="km" id="km">
+            </section>
+             <!--sezione bottoni-->
+            <section class="col pt-3">
+                <button class="genera">Genera</button>
+                <button class="clear">Cancella</button>
+            </section>
+            <!--container fluid + flex-->
+            <div class="container-fluid d-flex justify-content-center mt-5">
+                <!--biglietto-->
+                <div class="biglietto  px-3 py-4">
+                    <!--dettagli-->
+                    <div id="dettagli" class=" pt-3 ps-3">
+                        <h3>Dettaglio Passeggero</h3>
+                    </div>
+                    <!--info biglietto-->
+                    <div class="row px-2 mt-4">
+                        <!--sezione nome e cognome passeggero-->
+                        <div class="col border bg-info">
+                            <h4>Nome Passeggero</h4>
+                            <div class="nominativo"></div>
+                        </div>
+                         <!--offerta-->
+                        <div class="col border bg-info">
+                            <h5>Offerta</h5>
+                            <p>Biglietto stardard</p>
+                        </div>
+                        <!--sezione carrozza-->
+                        <div class="col border bg-info">
+                            <h5>Carrozza</h5>
+                            <p>5</p>
+                        </div>
+                        <!--sezione codice cp-->
+                        <div class="col border bg-info">
+                            <h5>Codice CP</h5>
+                            <p>92011</p>
+                        </div>
+                        <!--sezione costo biglietto-->
+                        <div class="col border bg-info">
+                            <h4>Costo Biglietto</h4>
+                            <div class="ticket"></div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+            <!--sezione sconti-->
+            <div class="mt-5 text-wrap text-white">
+                <h3>Sconto del 20% per i minorenni - Sconto del 60% per gli over 65</h3>
+
+            </div>
 
 
 
         </div>
-           
-        
+
+
 
     </div>
 
-    <div class="container-fluid d-flex justify-content-center mt-5"> 
-        <div class="biglietto px-3">
-            <div id="dettagli" class="pt-3 ps-3">
-                <h3>Dettaglio Passeggero</h3>
-                <br>
-            </div>
-            <div class="d-flex bg-info pt-3 px-3 justify-content-between mt-4">
-                <div>
-                    <h4>Nome Passeggero</h4>
-                    <div class="nominativo"></div>
-                </div>
-                 
-                 <div>
-                    <h5>Offerta</h5>
-                    <p>Biglietto stardard</p>
-                </div>
-                <div>
-                    <h5>Carrozza</h5>
-                    <p>5</p>
-                 </div>
-                 <div>
-                    <h5>Codice CP</h5>
-                    <p>92011</p>
-                 </div>
-                 <div>
-                    <h4>Costo Biglietto</h4>
-                    <div class="ticket"></div>
-                </div>
 
-                
-            </div>
-
-               
-        </div>
-    </div>
 
 
 

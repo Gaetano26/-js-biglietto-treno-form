@@ -6,31 +6,34 @@
 
 
 
-
-
+// app
 const app = document.getElementById('app');
 
+// nome del passeggero
 const nomeCognomeBox = app.querySelector('input[name= "nome"]');
 
+// età del passeggero
 const ageBox = app.querySelector('input[name="age"]');
 
+// kilometri da percorrere
 const kmBox = app.querySelector('input[name="km"]');
 
+// bottone 'genera'
 const generate = app.querySelector('.genera')
 
+// bottone 'clear'
 const clear = app.querySelector('.clear')
 
+// ticket
 const ticket = app.querySelector('.ticket')
 
+// nominativo
 const nominativo = app.querySelector('.nominativo')
 
 
 
 
-
-
-
-
+// funzione al click del bottone 'genera'
 generate.addEventListener('click', function (){
     let nomeCognome = nomeCognomeBox.value;
     let age = ageBox.value;
@@ -42,7 +45,7 @@ generate.addEventListener('click', function (){
     nominativo.innerHTML += `
     <p>${nomeCognome}</p>
     `;
-
+    // Condizione sconto age < 18
     if (age < 18 ){
         price = (price -(price * discountForMinors)).toFixed(2);
         ticket.innerHTML += 
@@ -70,7 +73,7 @@ generate.addEventListener('click', function (){
 
 })
 
-
+// funzione al click del bottone 'cancella'
 clear.addEventListener('click', function (){
     nomeCognomeBox.value = '';
     ageBox.value = '';
